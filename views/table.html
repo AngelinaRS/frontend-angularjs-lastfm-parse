@@ -1,0 +1,36 @@
+<div class="red"> <!--This saves the select and input -->
+    <img src="sketch/last_fm_logo.png">
+    <select> <!--This is to choose the order-->
+        <optgroup label="Order By">
+        <option ng-click="To_Order='artist.name'">Artist</option>
+        <option ng-click="To_Order='name'">Song</option>
+        <option ng-click="To_Order='duration'">Duration</option>
+        <option ng-click="To_Order='playcount'">Play Count</option>
+        <option ng-click="To_Order='listeners'">Listeners</option></optgroup>
+    </select>
+        <input class="input" type="text" placeholder="Search artists, songs or albums" ng-model="query"> <!--This is to search in the table-->
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Artist</th>
+            <th>Song</th>
+            <th>Duration</th>
+            <th>Play Count</th>
+            <th>Listeners</th>
+            <th>Photo</th>
+        </tr>
+    </thead>
+    <tbody> <!--Generates the rows and columns of the table-->
+        <tr ng-repeat="track in datatracks | filter:query | orderBy: To_Order">
+            <td>{{track["artist"]["name"]}}</td>
+            <td>{{track["name"]}}</td>
+            <td>{{track["duration"]}} seg</td>
+            <td>{{track["playcount"]}}</td>
+            <td>{{track["listeners"]}}</td>
+            <td> 
+                <img ng-src='{{track["image"][3]["#text"]}}'>
+            </td>
+        </tr>
+    </tbody>
+</table>

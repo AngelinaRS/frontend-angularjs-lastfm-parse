@@ -1,5 +1,5 @@
 // Javascript Code.
-var app = angular.module('app', []);
+var app = angular.module("app", ['ngRoute']);
 
 app.controller('PasswordController', function PasswordController($scope) {
   $scope.title = "This is AngularJS and Jasmin!";
@@ -14,6 +14,13 @@ app.controller('PasswordController', function PasswordController($scope) {
       $scope.strength = 'weak';
     }
   };
+});
+
+app.config(function($routeProvider) {
+  $routeProvider.when('/', {
+    templateUrl: 'views/table.html',
+    controller: 'MainController'
+  });
 });
 
 app.controller("MainController", function($scope, $http){
