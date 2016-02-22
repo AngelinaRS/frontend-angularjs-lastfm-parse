@@ -18,7 +18,7 @@ app.controller('PasswordController', function PasswordController($scope) {
 
 app.config(function($routeProvider) {
   $routeProvider.when('/', {
-    templateUrl: 'views/table.html',
+    templateUrl: 'views/login.html',
     controller: 'MainController'
   });
 });

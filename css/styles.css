@@ -1,5 +1,9 @@
+/****************Properties of table of songs********/
+
 body{
 	margin: 0;
+	height: 100%;
+	width: 100%;
 }
 
 .red {
@@ -64,3 +68,39 @@ img {
 	height: 50px;
 }
 
+/*************************************************/
+
+/************Properties of login******************/
+
+.div-red {
+	bottom: 0;
+	width: 100%;
+	height: 50%;
+	background-color: red;
+	position: absolute;
+}
+
+.login {
+	width: 30%;
+	height: 100%;
+	float: left;
+	margin-left: 20%;
+	background-color: black;
+	display: inline-block;
+}
+
+.vertical-line {
+	width: 1px;
+	height: 80%;
+	background-color: white;
+	float: left;
+	margin-top: 3%;
+	display: inline-block;
+}
+
+.creates {
+	width: 30%;
+	height: 100%;
+	background-color: black;
+	float: left;
+}
