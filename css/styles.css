@@ -72,11 +72,39 @@ img {
 
 /************Properties of login******************/
 
-.div-red {
+.img-logo {
+	height: 50px;
+	width: 140px;
+	position: absolute;
+	z-index: 2;
+	margin-left: 12%;
+}
+
+.black {
+	width: 100%;
+	height: 50%;
+	background-color: black;
+	top: 0;
+	position: absolute;
+}
+
+
+.slide .img{
+	width: 80%;
+	height: 100%;
+	margin-left: 10%;
+	position: absolute;
+}
+
+.slide .img2, .slide .img3 {
+	display: none;
+}
+
+.part-red {
 	bottom: 0;
 	width: 100%;
 	height: 50%;
-	background-color: red;
+	background-color: rgba(255,0,0,1);
 	position: absolute;
 }
 
@@ -113,7 +141,7 @@ img {
 	font-size: 20px;
 }
 
-.input {
+.input-log {
 	width: 85%;
 	margin-top: -10px;
 	margin-bottom: 25px;

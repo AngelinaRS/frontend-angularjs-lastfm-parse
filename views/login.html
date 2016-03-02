@@ -1,12 +1,20 @@
-<div class="div-red">
+<div class="black">
+	<div class="slide">
+		<img src="sketch/last_fm_logo.png" class="img-logo"/>
+		<img src="sketch/hardwell-01.png" class="img1 img"/>
+		<img src="sketch/shakira-01.png" class="img2 img"/>
+		<img src="sketch/u2-01.png" class="img3 img"/>
+	</div>
+</div>
+<div class="part-red">
 	<div class="login">
 		<p class="white center">Log In</p>
 
 		<p class="white">Email</p>
-		<input class="input left" type="text">
+		<input class="input-log left" id="signin-email" type="text">
 
 		<p class="white">Password</p>
-		<input class="input left" type="password">
+		<input class="input-log left" id="signin-password" type="password">
 
 		<p class="white underline">Forgot your Password?</p>
 
@@ -17,14 +25,14 @@
 		<p class="white center">Create your profile</p>
 
 		<p class="white left-margin">Name</p>
-		<input class="input right" type="text">
+		<input class="input-log right" id="signup-name" type="text">
 
 		<p class="white left-margin">Email</p>
-		<input class="input right" type="text">
+		<input class="input-log right" id="signup-email" type="text">
 
 		<p class="white left-margin">Password</p>
-		<input class="input right" type="password">
+		<input class="input-log right" id="signup-password" type="password">
 
-		<button>Confirm</button>
+		<button ng-click="signUp()">Confirm</button>
 	</div>
 </div>
