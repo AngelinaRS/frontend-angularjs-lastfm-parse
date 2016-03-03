@@ -1,5 +1,7 @@
 // Javascript Code.
 
+Parse.initialize("o738tDIjX7Oq1jSB1PtSG6LfVeZqOgpaKH0pK3dt", "p7JfKdqPlYwWoenFcH1pnxR73YDzNaHAjz6iAwhq");
+
 var app = angular.module("app", ['ngRoute']);
 
 app.controller('PasswordController', function PasswordController($scope) {
@@ -20,6 +22,10 @@ app.controller('PasswordController', function PasswordController($scope) {
 app.config(function($routeProvider) {
   $routeProvider.when('/', {
     templateUrl: 'views/login.html',
+    controller: 'logController'
+  });
+  $routeProvider.when('/table', {
+    templateUrl: 'views/table.html',
     controller: 'MainController'
   });
 });
@@ -37,24 +43,34 @@ app.controller("MainController", function($scope, $http){
 });
 
 
-app.controller("loginController", function($scope){
-  $scope.signUp = function(){
-    var logup_name = $("#signup-name").val();
-    var logup_email = $("#signup-email").val();
-    var logup_password = $("#signup-password").val();
+app.controller("logController", function($scope, $window){
+  $scope.signup_user = function(){
 
     var user = new Parse.User();
-    user.set("username", logup_name);
-    user.set("password", logup_password);
-    user.set("email", logup_email);
+
+    user.set("username", $("#signup-name").val());
+    user.set("password", $("#signup-password").val());
+    user.set("email", $("#signup-email").val());
 
     user.signUp(null, {
       success: function(user) {
-        // Hooray! Let them use the app now.
+        $window.location.href = '#/table';
       },
       error: function(user, error) {
         // Show the error message somewhere and let the user try again.
-        alert("Error: " + error.code + " " + error.message);
+        alert("Error: " + " " + error.message);
+      }
+    });
+  };
+
+  $scope.signin_user = function(){
+    Parse.User.logIn($("#signin-email").val(), $("#signin-password").val(), {
+      success: function(user) {
+        $window.location.href = '#/table';
+      },
+      error: function(user, error) {
+        // The login failed. Check error to see why.
+        alert("Error: " + " " + error.message);
       }
     });
   };
