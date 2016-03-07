@@ -38,10 +38,22 @@ option {
 
 input {
 	width: 30%;
-	float: right;
 	margin-bottom: 2%;
 	margin-right: 10%;
 	margin-top: 2%;
+	display: inline-block;
+}
+
+.logout {
+	background-color: black;
+	height: 42px;
+	width: 75px;
+	border: 1px solid black;
+	color: white;
+	position: absolute;
+	margin-left: -100px;
+	margin-top: 1%;
+	border-radius: 5px;
 }
 
 table {
@@ -70,13 +82,13 @@ img {
 
 /*************************************************/
 
-/************Properties of login******************/
+/************Properties of loggin******************/
 
 .img-logo {
 	height: 50px;
 	width: 140px;
 	position: absolute;
-	z-index: 2;
+	z-index: 1;
 	margin-left: 12%;
 }
 
@@ -88,16 +100,32 @@ img {
 	position: absolute;
 }
 
-
 .slide .img{
 	width: 80%;
 	height: 100%;
 	margin-left: 10%;
 	position: absolute;
+	z-index: 0;
 }
 
 .slide .img2, .slide .img3 {
 	display: none;
+}
+
+.doti {
+	position: absolute;
+	margin-left: 46%;
+	margin-top: 23%;
+}
+
+.dot {
+	height: 10px;
+	width: 10px;
+	border-radius: 100%;
+	background-color: yellow;
+	z-index: 2;
+	display: inline-block;
+	margin-left: 15px;
 }
 
 .part-red {
@@ -108,7 +136,7 @@ img {
 	position: absolute;
 }
 
-.login {
+.loggin {
 	width: 30%;
 	height: 100%;
 	float: left;
@@ -145,6 +173,7 @@ img {
 	width: 85%;
 	margin-top: -10px;
 	margin-bottom: 25px;
+	float: right;
 }
 
 .right {
@@ -159,7 +188,7 @@ img {
 	margin-left: 50.5px;
 }
 
-button {
+.button {
 	width: 35%;
 	height: 10%;
 	background-color: black;

@@ -30,7 +30,7 @@ app.config(function($routeProvider) {
   });
 });
 
-app.controller("MainController", function($scope, $http){
+app.controller("MainController", function($scope, $http, $window){
   $http.get("http://ws.audioscrobbler.com/2.0/?method=chart.getTopTracks&api_key=da38c0fa01ea26827dd79dcd3457804a&format=json")
     .success(function(data){
       $scope.datatracks = data["tracks"]["track"]; //takes the information from json
@@ -40,6 +40,13 @@ app.controller("MainController", function($scope, $http){
     });
 
     $scope.To_Order = "artist.name"; //Variable to order the data
+
+    $scope.logOut_user = function(){
+
+      Parse.User.logOut();
+      $window.location.href = '#/';
+
+  };
 });
 
 
@@ -49,8 +56,8 @@ app.controller("logController", function($scope, $window){
     var user = new Parse.User();
 
     user.set("username", $("#signup-name").val());
+    user.set("username", $("#signup-email").val());
     user.set("password", $("#signup-password").val());
-    user.set("email", $("#signup-email").val());
 
     user.signUp(null, {
       success: function(user) {
@@ -74,7 +81,6 @@ app.controller("logController", function($scope, $window){
       }
     });
   };
-
 });
 
 //Timeslot 3 seconds, call function Slide
