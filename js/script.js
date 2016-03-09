@@ -88,7 +88,7 @@ setInterval('Slide()',3000);
 
 //Array of the images
 var arrayImages = new Array(".img1",".img2",".img3");
- 
+
 var count = 0;
  
 //Efect fadeIn to show an image
@@ -96,15 +96,16 @@ function show(img){
   $(".img").ready(function(){
       $(arrayImages[count]).fadeIn(1500);
   });
+  //$(".point-0").addClass("point-transparent ");
 }
- 
+
 //Efect fadeOut to hide an image
 function hide(img){
   $(".img").ready(function(){
       $(arrayImages[count]).fadeOut(1500);
   });
 }
- 
+
 //Main function
 function Slide(){
         //hide the current image
@@ -113,4 +114,36 @@ function Slide(){
   count = (count + 1) % 3;
         //show the other image
   show(arrayImages[count]);
+}
+
+
+//Timeslot 3 seconds, call function PointSlide
+setInterval('PointSlide()',3000);
+
+//Array of Points
+var arrayPoints = new Array(".point-0",".point-1",".point-2");
+
+var count_points = 0;
+ 
+//Background transparent
+function transparent_point(point){
+  $(".point").ready(function(){
+      $(arrayPoints[count_points]).addClass("point-transparent");
+  });
+}
+
+//Background white
+function white_point(point){
+  $(".point").ready(function(){
+      $(arrayPoints[count_points]).removeClass("point-transparent");
+  });
+}
+
+//Main function
+function PointSlide(){
+  white_point(arrayPoints[count_points]);
+        //Increase the count in one
+  count_points = (count_points + 1) % 3;
+
+  transparent_point(arrayPoints[count_points]);
 }

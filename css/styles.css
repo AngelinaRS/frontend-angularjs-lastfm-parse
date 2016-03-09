@@ -112,20 +112,25 @@ img {
 	display: none;
 }
 
-.doti {
+.slide-points {
 	position: absolute;
 	margin-left: 46%;
 	margin-top: 23%;
 }
 
-.dot {
+.point {
 	height: 10px;
 	width: 10px;
 	border-radius: 100%;
-	background-color: yellow;
+	border: 1px solid white;
+	background-color: white;
 	z-index: 2;
 	display: inline-block;
 	margin-left: 15px;
+}
+
+.point-transparent {
+	background-color: transparent;
 }
 
 .part-red {
