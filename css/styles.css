@@ -203,9 +203,12 @@ img {
 	margin-left: 126.75px;
 }
 
-.underline {
-	text-decoration: underline;
-	margin-bottom: 50.7px;
+.button-login {
+	margin-top: 50.7px;
+}
+
+.button-confirm {
+	margin-top: 10px;
 }
 
 p:first-child {
@@ -214,4 +217,53 @@ p:first-child {
 
 div p p, p, p {
 	font-size: 12px;
+}
+/***********************************\
+
+******Reset Password****************/
+
+.background-reset_password {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	margin: 0;
+}
+
+.reset-password {
+	background-color: white;
+	width: 40%;
+	height: 20%;
+	position: absolute;
+	margin-left: 30%;
+	margin-top: 5%;
+	border-radius: 10px;
+}
+
+.x {
+	float: right;
+	margin-right: 0;
+	margin-top: 0;
+	border-radius: 5px;
+	color: red;
+	background-color: white;
+	border: 1px solid black;
+}
+
+.type-email {
+	text-align: center;
+	font-size: 15px;
+}
+
+.input-reset {
+	width: 60%;
+	margin-left: 10%;
+	display: inline-block;
+}
+
+.send {
+	margin-left: -50px;
+	color: green;
+	background-color: white;
+	border: 1px solid black;
 }

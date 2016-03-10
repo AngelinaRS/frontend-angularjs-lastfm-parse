@@ -16,28 +16,28 @@
 		<p class="white center">Log In</p>
 
 		<p class="white">Email</p>
-		<input class="input-log left" id="signin-email" type="text">
+		<input class="input-log left" id="signin-email" type="text" placeholder="Type your email">
 
 		<p class="white">Password</p>
-		<input class="input-log left" id="signin-password" type="password">
+		<input class="input-log left" id="signin-password" type="password" placeholder="Type your password">
 
-		<p class="white underline">Forgot your Password?</p>
+		<p><a href="#" class="white underline" ng-click="forgot_password()">Forgot your Password?</a></p>
 
-		<button class="button" ng-click="signin_user()">Log In</button>
+		<button class="button button-login" ng-click="signin_user()">Log In</button>
 	</div>
 	<div class="vertical-line"></div>
 	<div class="creates">
 		<p class="white center">Create your profile</p>
 
 		<p class="white left-margin">Name</p>
-		<input class="input-log right" id="signup-name" type="text">
+		<input class="input-log right" id="signup-name" type="text" placeholder="Type your username">
 
 		<p class="white left-margin">Email</p>
-		<input class="input-log right" id="signup-email" type="text">
+		<input class="input-log right" id="signup-email" type="text" placeholder="Type your email">
 
 		<p class="white left-margin">Password</p>
-		<input class="input-log right" id="signup-password" type="password">
+		<input class="input-log right" id="signup-password" type="password" placeholder="Type your password">
 
-		<button class="button" ng-click="signup_user()">Confirm</button>
+		<button class="button button-confirm" ng-click="signup_user()">Confirm</button>
 	</div>
 </div>

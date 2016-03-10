@@ -24,9 +24,15 @@ app.config(function($routeProvider) {
     templateUrl: 'views/login.html',
     controller: 'logController'
   });
+
   $routeProvider.when('/table', {
     templateUrl: 'views/table.html',
     controller: 'MainController'
+  });
+
+  $routeProvider.when('/reset_password', {
+    templateUrl: 'views/reset_password.html',
+    controller: 'ResetPasswordController'
   });
 });
 
@@ -56,7 +62,7 @@ app.controller("logController", function($scope, $window){
     var user = new Parse.User();
 
     user.set("username", $("#signup-name").val());
-    user.set("username", $("#signup-email").val());
+    user.set("email", $("#signup-email").val());
     user.set("password", $("#signup-password").val());
 
     user.signUp(null, {
@@ -80,6 +86,29 @@ app.controller("logController", function($scope, $window){
         alert("Error: " + " " + error.message);
       }
     });
+  };
+  $scope.forgot_password = function(){
+    $window.location.href = '#/reset_password';
+  };
+});
+
+app.controller("ResetPasswordController", function($scope, $window){
+
+  $scope.password_reset = function(){
+    Parse.User.requestPasswordReset($("#send-email").val(), {
+      success: function() {
+      // Password reset request was sent successfully
+        alert("Email sent successfully")
+      },
+      error: function(error) {
+        // Show the error message somewhere
+        alert("Error: " + " " + error.message);
+      }
+    });
+  };
+
+  $scope.exit = function(){
+    $window.location.href = '#/';
   };
 });
 
