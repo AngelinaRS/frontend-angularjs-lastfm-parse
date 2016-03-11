@@ -26,7 +26,7 @@
         <tr ng-repeat="track in datatracks | filter:query | orderBy: To_Order">
             <td>{{track["artist"]["name"]}}</td>
             <td>{{track["name"]}}</td>
-            <td>{{track["duration"]}} seg</td>
+            <td>{{track["duration"]/60 | number:2}} min</td>
             <td>{{track["playcount"]}}</td>
             <td>{{track["listeners"]}}</td>
             <td> 
