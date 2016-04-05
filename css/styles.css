@@ -76,6 +76,8 @@ td img {
 	height: 50px;
 }
 
+/*Media Queries*/
+
 @media(max-width: 980px){
 	select {
 		margin-left: 5%;
@@ -95,10 +97,6 @@ td img {
 	}
 
 	.logout {
-<<<<<<< HEAD
-=======
-		background-color: green;
->>>>>>> 73ae7bcf99d9cf19104c30dd9ff25b5250f5a1d2
 		float: right;
 		margin-right: 5%;
 	}
@@ -139,10 +137,6 @@ td img {
 	}
 
 	.logout {
-<<<<<<< HEAD
-=======
-		background-color: yellow;
->>>>>>> 73ae7bcf99d9cf19104c30dd9ff25b5250f5a1d2
 		float: right;
 	}
 
@@ -184,10 +178,6 @@ td img {
 	}
 
 	.logout {
-<<<<<<< HEAD
-=======
-		background-color: red;
->>>>>>> 73ae7bcf99d9cf19104c30dd9ff25b5250f5a1d2
 		float: right;
 	}
 
