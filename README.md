@@ -46,3 +46,5 @@ Parse in a folder called **bower_components**.
 # You can see my project:
 
 ## http://angelinars.github.io/frontend-angularjs-lastfm-parse
+
+Git
